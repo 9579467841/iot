@@ -1,0 +1,82 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.map {
+  background: url("https://raw.githubusercontent.com/futurice/tamperefutucafe/master/Futurice-sisatilapaikannus-kartta-tammerforce.png") no-repeat 50% 50%;
+  background-size: cover;
+  position: relative;
+  width: 96vw;
+  height: 78vw;
+  margin: 2vw auto;
+}
+
+.location {
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 -12px;
+  position: absolute;
+  background: #FFF;
+  border: 3px solid #EEE;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #46289A;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.location:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.location.indicator--alert {
+  border-color: #ffc5cf;
+}
+.location.indicator--ok {
+  border-color: #a1e1aa;
+}
+
+.badge {
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  min-width: 15px;
+  display: inline-block;
+  background: #FF9090;
+  color: #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .map {
+    width: 60vw;
+    height: 48vw;
+  }
+
+  .location {
+    width: 34px;
+    height: 34px;
+    margin: -17px 0 -17px;
+    font-size: 20px;
+    border-width: 4px;
+  }
+}
